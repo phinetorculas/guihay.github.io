@@ -1,0 +1,111 @@
+:root {
+    --footer-margin: 10px; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #FF7F3E;
+    color: white;
+    padding: 5px 16px;
+    border-top: 3px solid white; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--footer-margin); 
+}
+
+.footer-logo-section, .footer-logo-section2 {
+    max-width: 80px;
+    height: auto;
+    margin: 0 var(--footer-margin);
+}
+
+.footer-logo-section2 {
+    padding-left: 20px var(--footer-margin); 
+}
+
+.footer-introduction-section,
+.footer-government-links,
+.footer-department-section,
+.contact-info {
+    text-align: left;
+    margin: 5px var(--footer-margin);
+    flex: 1;
+}
+
+footer h6 {
+    text-align: left; 
+}
+
+footer p {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 6px;
+    font-size: 9px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+footer li {
+    margin-bottom: 4px;
+    font-size: 9px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-info h6 {
+    margin: 5px 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.footer-introduction-section h6,
+.footer-government-links h6,
+.footer-department-section h6 {
+    margin-bottom: 5px;
+}
+
+.footer-introduction-section p,
+.footer-government-links ul,
+.footer-department-section ul {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.footer-government-links li,
+.footer-department-section li {
+    margin-bottom: 4px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barangay Guihay</title>
+  <link rel="stylesheet" href="./css/records.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="services-container">
+    <div class="title">Services Zones</div>
+    <div class="square-container">
+      <div class="square" data-zone="1">ZONE 1</div>
+      <div class="square" data-zone="2">ZONE 2</div>
+      <div class="square" data-zone="3">ZONE 3</div>
+      <div class="square" data-zone="4">ZONE 4</div>
+      <div class="square" data-zone="5">ZONE 5</div>
+      <div class="square" data-zone="6">ZONE 6</div>
+      <div class="square" data-zone="7">ZONE 7</div>
+    </div>
+  </div>
+
+  
+
+  <div id="passwordModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Please enter the password:</p>
+      <input type="password" id="passwordInput" />
+      <button onclick="checkPassword()">Submit</button>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script type="module" src="./js/loadHTML.js"></script>
+  <script type="module" src="./js/modal.js"></script>
+  <script>
+    const squares = document.querySelectorAll(".square");
+    const passwordModal = document.getElementById("passwordModal");
+    const passwordInput = document.getElementById("passwordInput");
+    const myModal = document.getElementById("myModal");
+
+    squares.forEach((square) => {
+      square.addEventListener("click", () => {
+        passwordModal.style.display = "block";
+      });
+    });
+
+    function checkPassword() {
+      const password = passwordInput.value;
+      // Check if password is correct (you need to define your own logic here)
+      if (password === "123") {
+        passwordModal.style.display = "none";
+        myModal.style.display = "block";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+
+    function closeModal() {
+      myModal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
